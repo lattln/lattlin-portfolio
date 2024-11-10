@@ -1,7 +1,7 @@
-import projects1 from "../assets/projects1.webp";
-import projects2 from "../assets/projects2.webp";
-import projects3 from "../assets/projects3.webp";
-import projects4 from "../assets/projects4.webp";
+import project1 from "../assets/project1.jpg";
+import project2 from "../assets/project2.jpg";
+import project3 from "../assets/project3.jpg";
+import project4 from "../assets/project4.jpg";
 
 export const LINKS = [
     { href: "#work", label: "Work" },
@@ -22,28 +22,28 @@ export const HERO_CONTENT = {
 
 export const PROJECTS = [
     {
-        name: "Macro and Me",
+        name: "Macro and Me (WIP)",
         description: "Track your meals and calories with smart AI suggestions",
-        image: projects2,
+        image: project1,
         link: "https://github.com/lattln",
     },
     {
-        name: "Electronic Health Record Dashboard",
-        description: "A platform for hair regrowth solutions powered by science",
-        image: projects3,
+        name: "Electronic Health Record Dashboard (WIP)",
+        description: "FHIR Compliance Dashboard with clinical & Patient views",
+        image: project2,
         link: "https://github.com/lattln",
     },
     {
         name: "MIE Form Builder",
         description: "FHIR Compliance form builder for creating & Editing questionnaire",
-        image: projects1,
+        image: project3,
         link: "https://github.com/lattln",
     },
     {
         name: "Form Builder Packages",
         description:
             "Multiple NPM package for editorjs, Devdependencies for FHIR Questionnaire Builder",
-        image: projects4,
+        image: project4,
         link: "https://github.com/lattln",
     },
 ];

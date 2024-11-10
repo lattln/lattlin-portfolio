@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { clipPath } from 'framer-motion/client'
 import { HERO_CONTENT } from '../constants'
+import latt from "../assets/latt-root.webp"
 
 const textVariants = {
     hidden: {
@@ -47,7 +47,7 @@ const Hero = () => {
             <div className='relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white'>
                 <motion.div 
                     className='w-full md:w-1/2 p-8'
-                    inital='hidden'
+                    initial='hidden'
                     animate='visible'
                     variants={containerVariants}>
 
@@ -78,8 +78,18 @@ const Hero = () => {
                         variants={textVariants}>
                             {HERO_CONTENT.resumeLinkText}
                     </motion.a>
+                </motion.div>
+
+                <motion.div
+                    className='w-full md:w-1/2 p-8'
+                    initial='hidden'
+                    animate='visible'
+                    variants={imageVariants}>
+                        <img src={latt} alt='lin latt' width={650} height={650}
+                                className='rounded-3xl'></img>
 
                 </motion.div>
+
             </div>
         </section>
     )
