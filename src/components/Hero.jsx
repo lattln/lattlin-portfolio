@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, spring } from 'framer-motion'
 import { HERO_CONTENT } from '../constants'
 import latt from "../assets/latt-root.webp"
 
@@ -15,9 +15,9 @@ const Hero = () => {
                 >
                     <motion.h1 
                         className='text-2xl md:text-3xl lg:text-5xl my-14'
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
                     >
                         {HERO_CONTENT.greeting}
                     </motion.h1>
@@ -46,9 +46,10 @@ const Hero = () => {
                         download
                         rel='noopener noreferrer'
                         target='_blank'
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        initial={{ opacity: 0, x: -300 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ type: 'spring'}}
+                        whileHover={{scale: 1.1}}
                     >
                         {HERO_CONTENT.resumeLinkText}
                     </motion.a>
@@ -58,7 +59,7 @@ const Hero = () => {
                     className='w-full md:w-1/2 p-8'
                     initial={{ clipPath: "inset(0 50% 0 50%)" }}
                     animate={{ clipPath: "inset(0 0% 0 0%)" }}
-                    transition={{ duration: 1.2, ease: "easeInOut" }}
+                    transition={{ duration: 1.1, ease: "easeInOut" }}
                 >
                     <img src={latt} alt='lin latt' width={650} height={650} className='rounded-3xl' />
                 </motion.div>
