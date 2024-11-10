@@ -61,8 +61,8 @@ export const Contacts = () => {
 
             <motion.p 
                 className='text-sm text-stone-400 mt-36'
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 1.6 }}
             >
