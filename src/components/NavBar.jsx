@@ -19,7 +19,7 @@ const NavBar = () => {
         >
             <div className='flex justify-between items-center max-w-6xl mx-auto md:my-2 bg-stone-950/30 p-4 md:rounded-xl backdrop-blur-lg'>
                 <div className='text-white font-semibold text-lg uppercase'>
-                    <a href='/'>Lin Latt</a>
+                    <a href='/lattlin-portfolio/'>Lin Latt</a>
                 </div>  
                 
                 <div className='hidden md:flex space-x-8'>
