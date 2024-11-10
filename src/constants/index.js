@@ -96,12 +96,6 @@ export const CONTACT_CONTENT = {
     email: "lattln.tech@gmail.com",
     socialLinks: [
         {
-            platform: "Twitter",
-            url: "https://twitter.com/yourprofile",
-            ariaLabel: "Follow me on Twitter",
-            icon: "RiTwitterXFill",
-        },
-        {
             platform: "GitHub",
             url: "https://github.com/lattln",
             ariaLabel: "View my GitHub profile",
