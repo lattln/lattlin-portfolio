@@ -13,7 +13,7 @@ export const LINKS = [
 ];
 
 export const HERO_CONTENT = {
-    greeting: "Hey there! 🖐️",
+    greeting: "Hi! 👋",
     introduction:
         "I’m Lin Latt, a creative frontend developer, crafting immersive and intuitive web experiences.",
     description:

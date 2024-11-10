@@ -63,7 +63,7 @@ const Hero = () => {
                     dragConstraints={{ left: -50, right: 50, top: -100, bottom: 100 }}
                     whileDrag={{opacity: .5, scale: .9}}
                     whileHover={{scale: 1.05}}
-                    transition={{ duration: 2, ease: "easeInOut", type:'spring', damping: 20, stiffness: 600 }}
+                    transition={{ duration: 1.3, ease: "easeInOut", type:'spring'}}
                 >
                     <img 
                         src={latt} alt='lin latt' width={650} height={650} className='rounded-3xl'
