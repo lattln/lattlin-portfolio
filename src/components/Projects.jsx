@@ -5,7 +5,14 @@ import { PROJECTS } from '../constants'
 const Projects = () => {
     return (
         <section className='px-6 py-10' id='work'>
-            <h1 className='text-4xl md:text-6xl font-medium tracking-tight mb-10'>Work</h1>
+            <motion.h2 
+                className='text-4xl md:text-6xl font-medium tracking-tight mb-10'
+                initial={{opacity: 0, x:-200}}
+                whileInView={{opacity: 1, x:0}}
+                viewport={{once: true}}
+                transition={{duration: .5, type:'spring', damping: 18, stiffness: 400, delay: .3}}>
+                    Work
+            </motion.h2>
             
             <div className='h-1 w-20 mb-8 bg-white'></div>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
@@ -13,9 +20,9 @@ const Projects = () => {
                     <motion.div
                         key={index}
                         className='relative rounded-lg overflow-hidden h-[500px] transition transform will-change-transform will-change-opacity'
-                        initial={{ opacity: 0, y: 100, scale: .8}}
-                        whileInView={{ opacity: 1, y: 0, scale: 1}}
-                        transition={{duration: 0.3, type: 'spring'}}
+                        initial={{ opacity: 0, x: 200, y: 30, rotate: 10}}
+                        whileInView={{ opacity: 1, x: 0, y: 0, rotate: 0}}
+                        transition={{ duration: 0.05, delay: .2 + index * 0.1, type: 'spring'}}
                         viewport={{ once: true }}
                     >
                         <div className='absolute inset-0 w-full h-full object-cover transition-opacity duration-300 bg-stone-950'></div>

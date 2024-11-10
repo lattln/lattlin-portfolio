@@ -1,11 +1,18 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, spring } from 'framer-motion'
 import { ABOUT_CONTENT } from '../constants'
 
 const About = () => {
     return (
         <section className='px-6 py-10' id='about'>
-            <h1 className='text-4xl md:text-6xl font-medium tracking-tight mb-10'> About</h1>
+            <motion.h2 
+                className='text-4xl md:text-6xl font-medium tracking-tight mb-10'
+                initial={{opacity: 0, x:-200}}
+                whileInView={{opacity: 1, x:0}}
+                viewport={{once: true}}
+                transition={{duration: .5, type:'spring', damping: 18, stiffness: 400, delay: .3}}>
+                    About
+            </motion.h2>
             <div className='h-1 w-20 mb-8 bg-white'></div>
 
             <div className='max-w-4xl mx-auto'>
