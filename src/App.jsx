@@ -22,7 +22,7 @@ const App = () => {
     }, [])
 
     return (
-        <>
+        <div className='cursor-none'>
             <BlurBackground />
             <NavBar />
             {isDesktop && <Cursor />}
@@ -33,7 +33,7 @@ const App = () => {
                 <Experience />
                 <Contacts />
             </main>
-        </>
+        </div>
     )
 }
 

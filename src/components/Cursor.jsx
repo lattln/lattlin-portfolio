@@ -5,7 +5,7 @@ const CustomCursor = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
 
     // Define the size of the cursor
-    const cursorSize = 40; // Adjust according to your cursor size
+    const cursorSize = 30; // Adjust according to your cursor size
 
     useEffect(() => {
         const handleMouseMove = (e) => {

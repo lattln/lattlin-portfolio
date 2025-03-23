@@ -19,7 +19,7 @@ const NavBar = () => {
         >
             <div className='flex justify-between items-center max-w-6xl mx-auto md:my-2 bg-stone-950/30 p-4 md:rounded-xl backdrop-blur-lg'>
                 <div className='text-white font-semibold text-lg uppercase'>
-                    <a href='/'>Lin Latt</a>
+                    <a href='/' className='cursor-none hover:text-stone-400 '>Lin Latt</a>
                 </div>  
                 
                 <div className='hidden md:flex space-x-8'>
@@ -27,7 +27,7 @@ const NavBar = () => {
                         <a 
                             href={link.href} 
                             key={index} 
-                            className='text-white hover:text-stone-400 transition duration-300'
+                            className='text-white hover:text-stone-400 transition duration-300 cursor-none'
                         >
                             {link.label}
                         </a>
@@ -37,7 +37,7 @@ const NavBar = () => {
                 <div className='md:hidden'>
                     <button 
                         onClick={() => setMenuOpen(!menuOpen)}
-                        className='text-white focus:outline-none' 
+                        className='text-white focus:outline-none cursor-none' 
                         aria-label={menuOpen ? 'Close menu' : 'Open menu'}
                     >
                         {menuOpen ? (

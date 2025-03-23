@@ -15,7 +15,7 @@ const Projects = () => {
             </motion.h2>
             
             <div className='h-1 w-20 mb-8 bg-white'></div>
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {PROJECTS.map((project, index) => (
                     <motion.div
                         key={index}
@@ -40,7 +40,7 @@ const Projects = () => {
                                     onTap={{scale: .9}}
                                     target='_blank' 
                                     rel='noopener noreferrer' 
-                                    className='bg-white text-stone-900 rounded-full py-2 px-2 w-32 text-sm hover:bg-gray-100 text-center'
+                                    className='bg-white text-stone-900 rounded-full py-2 px-2 w-32 text-sm hover:bg-gray-100 text-center cursor-none'
                                 >
                                     View on Github
                                 </motion.a>
