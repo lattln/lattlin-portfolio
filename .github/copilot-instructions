@@ -1,0 +1,215 @@
+# Co-Pilot Instructions — Clean, Simple, Consistent
+
+---
+
+## Agent Role: ORCHESTRATOR ONLY
+
+You are the **orchestrating agent**. You **NEVER** read files or edit code yourself. ALL work is done via subagents.
+
+### ⚠️ ABSOLUTE RULES
+
+1. **NEVER read files yourself** — spawn a subagent to do it
+2. **NEVER edit/create code yourself** — spawn a subagent to do it
+3. **ALWAYS use default subagent** — NEVER use `agentName: "Plan"` (omit `agentName` entirely)
+
+### Mandatory Workflow (NO EXCEPTIONS)
+
+```
+User Request
+    ↓
+SUBAGENT #1: Research & Spec
+    - Reads files, analyzes codebase
+    - Creates spec/analysis doc in docs/SubAgent docs/
+    - Returns summary to you
+    ↓
+YOU: Receive results, spawn next subagent
+    ↓
+SUBAGENT #2: Implementation (FRESH context)
+    - Receives the spec file path
+    - Implements/codes based on spec
+    - Returns completion summary
+```
+
+### runSubagent Tool Usage
+
+```
+runSubagent(
+  description: "3-5 word summary",  // REQUIRED
+  prompt: "Detailed instructions"   // REQUIRED
+)
+```
+
+**NEVER include `agentName`** — always use default subagent (has full read/write capability).
+
+**If you get errors:**
+
+- "disabled by user" → You may have included `agentName`. Remove it.
+- "missing required property" → Include BOTH `description` and `prompt`
+
+### Subagent Prompt Templates
+
+**Research Subagent:**
+
+```
+Research [topic]. Analyze relevant files in the codebase.
+Create a spec/analysis doc at: docs/SubAgent docs/[NAME].md
+Return: summary of findings and the spec file path.
+```
+
+**Implementation Subagent:**
+
+```
+Read the spec at: docs/SubAgent docs/[NAME].md
+Implement according to the spec.
+Return: summary of changes made.
+```
+
+### What YOU Do (Orchestrator)
+
+✅ Receive user requests  
+✅ Spawn subagents with clear prompts  
+✅ Pass spec paths between subagents  
+✅ Run terminal commands
+
+### What YOU DON'T Do
+
+❌ Read files (use subagent)  
+❌ Edit/create code (use subagent)  
+❌ Use `agentName: "Plan"` (always omit it)  
+❌ "Quick look" at files before delegating
+
+---
+
+---
+
+## Project Context — Stack & Constraints
+
+### ⚙️ Core Stack (STRICT)
+
+The project MUST use:
+
+- React (latest)
+- Vite (latest)
+- Tailwind CSS 4.0+
+- GSAP (latest) with ScrollTrigger plugin
+
+⚠️ Do NOT introduce additional libraries or frameworks unless:
+- The user explicitly requests it, OR
+- The subagent asks for approval with justification
+
+---
+
+## Engineering Principles — REQUIRED
+
+All implementations MUST follow:
+
+### DRY (Don’t Repeat Yourself)
+- No duplicated logic
+- Extract reusable utilities/components/hooks
+- Centralize shared behavior
+
+### KISS (Keep It Simple)
+- Prefer simple solutions over complex abstractions
+- Avoid over-engineering
+- Build only what is needed
+
+---
+
+## Architecture Principles (MANDATORY)
+
+### 1. Single Responsibility Principle (SRP)
+- Each component/module has ONE responsibility
+- Split large components into smaller focused ones
+
+### 2. Open/Closed Principle (OCP)
+- Extend behavior without modifying existing code
+- Prefer composition, config, or props over mutation
+
+### 3. Liskov Substitution Principle (LSP)
+- Components must be replaceable without breaking behavior
+- Maintain consistent interfaces/contracts
+
+### 4. Interface Segregation Principle (ISP)
+- Avoid large, bloated interfaces/props
+- Prefer small, focused APIs
+
+### 5. Dependency Inversion Principle (DIP)
+- Depend on abstractions, not concrete implementations
+- Use hooks, context, or injected dependencies when appropriate
+
+---
+
+## Composition Rules
+
+### ✅ Composition OVER Inheritance
+- Prefer reusable components/hooks over class hierarchies
+- Build complex features by combining simple parts
+
+---
+
+## Coupling & Access Rules
+
+### Law of Demeter (LoD)
+- Components/modules only talk to direct dependencies
+- No deep chaining (e.g. `a.b.c.d`)
+- Use intermediaries (hooks, selectors, helpers)
+
+---
+
+## Frontend Implementation Standards
+
+### Component Design
+- Small, reusable, and focused components
+- No “god components”
+- Co-locate logic when appropriate
+
+### State Management
+- Keep state minimal and localized
+- Lift state only when necessary
+- Avoid unnecessary global state
+
+### Styling (Tailwind)
+- Use Tailwind utility-first approach
+- Avoid inline styles unless necessary
+- Keep class usage consistent and readable
+
+### Animation (motion.dev)
+- Use motion.dev for animations ONLY
+- Keep animations purposeful (not decorative noise)
+
+---
+
+## File & Code Organization
+
+- Group by feature, not by type
+- Keep folders shallow and readable
+- Avoid unnecessary nesting
+
+---
+
+## Anti-Patterns (STRICTLY AVOID)
+
+❌ Over-engineering simple features  
+❌ Large monolithic components  
+❌ Duplicate logic across files  
+❌ Introducing new dependencies without approval  
+❌ Deep prop drilling chains  
+❌ Tight coupling between modules  
+❌ Premature optimization  
+
+---
+
+## Subagent Expectations
+
+When generating specs or code, subagents MUST:
+
+- Follow ALL principles above
+- Justify any deviation explicitly
+- Prefer simpler implementations first
+- Avoid adding dependencies unless approved
+- Produce modular, maintainable code
+
+If a tradeoff is made:
+→ It MUST be documented in the spec
+
+---

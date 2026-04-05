@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import project1 from "../assets/project1.webp";
 import project2 from "../assets/project2.webp";
 import project3 from "../assets/project3.webp";
@@ -55,6 +56,112 @@ export const ABOUT_CONTENT = {
         "I'm a passionate full-stack developer with experience in building responsive and scalable web applications. I enjoy working with modern technologies and continuously learning to improve my skills.",
         "I specialize in using technologies like React, Next.js, and Tailwind CSS to create responsive and scalable interfaces. My focus is on writing clean, maintainable code while collaborating with cross-functional teams to deliver projects that meet both business goals and user needs. I thrive in environments that challenge me to continuously learn and grow.",
     ],
+=======
+import { RiGithubFill, RiLinkedinFill } from "@remixicon/react";
+import macroAndMeImg from "../assets/images/macroAndMe.png";
+import ehrDashboardImg from "../assets/images/ehrDashboard.png";
+import eSheetImg from "../assets/images/eSheet.png";
+
+const GITHUB_URL = "https://github.com/lattln";
+const LINKEDIN_URL = "https://www.linkedin.com/in/lin-latt/";
+const CURRENT_YEAR = new Date().getFullYear();
+
+export const LINKS = [
+  { href: "#work", label: "Work" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
+];
+
+export const HERO_CONTENT = {
+  greeting: "Hi! 👋",
+  introduction:
+    "I design and build structured digital systems that turn complex ideas into clean, usable products.",
+  description:
+    "Full-stack developer focused on data-driven applications, intuitive interfaces, and scalable product architecture.",
+  resumeLinkText: "Download Resume",
+  resumeLink: "/resume.pdf",
+};
+
+export const PROJECTS = [
+  {
+    name: "eSheet",
+    tagline: "Schema-driven infrastructure for structured data.",
+    description: "Build, render, and manage complex data workflows through a unified form system.",
+    points: [
+      "Define once with schema, reuse across systems.",
+      "Enforce data consistency at the source.",
+      "Power downstream workflows with structured input.",
+    ],
+    image: eSheetImg,
+    link: "https://github.com/lattln/eSheet",
+    renderScale: "max-w-lg",
+    type: "system",
+    visualType: "isometric-chibi",
+    accent: {
+      section: "from-background-primary via-surface-secondary to-surface-primary",
+      glowA: "bg-accent-soft/70",
+      glowB: "bg-accent/20",
+      badge: "bg-accent-soft text-accent-active",
+      button: "bg-accent hover:bg-accent-hover focus-visible:ring-accent-active",
+      bullet: "text-accent",
+    },
+  },
+  {
+    name: "Macro & Me",
+    tagline: "Personal nutrition tracking that actually makes sense.",
+    description: "A focused, user-first macro tracker designed for clarity, speed, and consistency.",
+    points: [
+      "Instant macro visibility with clean visual summaries.",
+      "Fast logging flow that reduces friction.",
+      "Designed to build long-term habits, not overwhelm.",
+    ],
+    image: macroAndMeImg,
+    link: "https://github.com/lattln/macro-and-me",
+    renderScale: "max-w-lg",
+    type: "consumer",
+    visualType: "isometric-chibi",
+    accent: {
+      section: "from-background-primary via-surface-secondary to-surface-primary",
+      glowA: "bg-accent-soft/70",
+      glowB: "bg-accent/20",
+      badge: "bg-accent-soft text-accent-active",
+      button: "bg-accent hover:bg-accent-hover focus-visible:ring-accent-active",
+      bullet: "text-accent",
+    },
+  },
+  {
+    name: "EHR Dashboard",
+    tagline: "Clinical data, simplified for real-time decisions.",
+    description: "A modern dashboard for navigating complex patient data with speed and clarity.",
+    points: [
+      "Surface critical patient signals instantly.",
+      "Reduce cognitive load with structured layouts.",
+      "Support care decisions with clean, actionable data.",
+    ],
+    image: ehrDashboardImg,
+    link: "https://github.com/lattln/EHR-Dashboard",
+    renderScale: "max-w-lg",
+    type: "clinical",
+    visualType: "isometric-chibi",
+    accent: {
+      section: "from-background-primary via-surface-secondary to-surface-primary",
+      glowA: "bg-accent-soft/70",
+      glowB: "bg-accent/20",
+      badge: "bg-accent-soft text-accent-active",
+      button: "bg-accent hover:bg-accent-hover focus-visible:ring-accent-active",
+      bullet: "text-accent",
+    },
+  },
+];
+
+export const ABOUT_CONTENT = {
+  paragraphs: [
+    "I build systems that simplify complexity—turning structured data and workflows into interfaces people can actually use.",
+    "My focus is clarity: clear data, clear UI, and clear outcomes. Ship fast, measure impact, and iterate with purpose.",
+  ],
+>>>>>>> Stashed changes
 };
 
 export const EXPERIENCES = [
@@ -92,6 +199,7 @@ export const EXPERIENCES = [
 
 
 export const CONTACT_CONTENT = {
+<<<<<<< Updated upstream
     headline: "LET'S WORK ON SOMETHING GREAT",
     description:
         "I'm excited to collaborate on projects that push boundaries and create meaningful impact. Let's build something innovative and exceptional together.",
@@ -111,4 +219,25 @@ export const CONTACT_CONTENT = {
         },
     ],
     footerText: `© ${new Date().getFullYear()} Lin Latt. All rights reserved.`,
+=======
+  headline: "Let's Build Something Clean and Scalable",
+  description:
+    "Have an idea or product to build? I focus on creating fast, reliable systems that users understand and trust.",
+  email: "lattln.tech@gmail.com",
+  socialLinks: [
+    {
+      platform: "GitHub",
+      url: GITHUB_URL,
+      ariaLabel: "View my GitHub profile",
+      icon: RiGithubFill,
+    },
+    {
+      platform: "LinkedIn",
+      url: LINKEDIN_URL,
+      ariaLabel: "Connect with me on LinkedIn",
+      icon: RiLinkedinFill,
+    },
+  ],
+  footerText: `© ${CURRENT_YEAR} Lin Latt. All rights reserved.`,
+>>>>>>> Stashed changes
 };
