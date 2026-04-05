@@ -1,36 +1,58 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import Container from "../../components/ui/Container";
 import SectionHeading from "../../components/ui/SectionHeading";
 import { skills } from "../../constants";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function SkillsSection() {
+  const sectionRef = useRef(null);
   const listRef = useRef(null);
 
   useEffect(() => {
+    const sectionEl = sectionRef.current;
+    const listEl = listRef.current;
+    if (!sectionEl || !listEl) return undefined;
+
     const ctx = gsap.context(() => {
-      gsap.from(listRef.current.querySelectorAll("li"), {
-        opacity: 0,
-        y: 14,
-        duration: 0.3,
-        stagger: 0.03,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: listRef.current,
-          start: "top 85%",
-          toggleActions: "play none none none",
+      const animateIn = () => {
+        gsap.fromTo(
+          listEl,
+          { y: 18, scale: 0.985 },
+          {
+            y: 0,
+            scale: 1,
+            duration: 0.5,
+            ease: "power3.out",
+            overwrite: "auto",
+          }
+        );
+      };
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              animateIn();
+            }
+          }
         },
-      });
-    }, listRef);
+        { threshold: 0.45 }
+      );
+
+      observer.observe(sectionEl);
+
+      return () => observer.disconnect();
+    }, sectionEl);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section id="skills" className="scroll-mt-24 flex min-h-dvh items-center bg-background-primary py-16 md:py-20">
+    <section
+      id="skills"
+      ref={sectionRef}
+      className="scroll-mt-24 flex min-h-dvh items-center bg-background-primary py-16 md:py-20"
+    >
       <Container className="w-full">
         <SectionHeading
           eyebrow="Skills"
