@@ -104,39 +104,53 @@ export const ABOUT_CONTENT = {
   ],
 };
 
-export const EXPERIENCES = [
-    {
-        yearRange: "Jan 2024 — Present",
-        title: "Software Developer, Intern",
-        location: "Fort Wayne, IN",
-        description: [
-            "Developing a FHIR-Compliant form builder in React and Editor.js to streamline data translation between Editorjs BlockBase Data to FHIR.",
-            "Implemented a drag-and-drop UI with FHIR-compliant import/export for efficient, mobile-friendly form managament.",
-            "Collaborating with healthcare professional to allign UI/UX with clinical workflows using react Hooks and advances javascript.",
-        ],
-    },
-    {
-        yearRange: "July 2020 — Present",
-        title: "Signal Operation Support Specialist",
-        location: "indianapolis, IN",
-        description: [
-            "Maintained singal support system and devices.",
-            "provided technical support for computer system and networks, performing maintenance on devices and equipement.",
-            "Managed network operations, maintained satallite & antenna solutions, enforced signal polices, and conducted retransmission operations.",
-        ],
-    },
-    {
-        yearRange: "Aug 2023 - Dec 2024",
-        title: "Project Manager, Co-Op",
-        location: "Fort Wayne, IN",
-        description: [
-            "Directed the migration of the SMC backend from airtable to BaseRow, optimizing database management and reducing operational costs by 30%.",
-            "Managed project timelines with weekly sprints, Trello and Slack, while conducting bi-weekly stakeholder meetings for progress updates.",
-            "Oversaw a team of 5, coordinating tasks, facilitating communication, and ensuring efficient workflow to meet project milestones on time.",
-        ],
-    },
+export const skills = [
+  "React",
+  "JavaScript",
+  "TypeScript",
+  "GSAP",
+  "Tailwind CSS",
+  "Node.js",
+  "Express",
+  "PostgreSQL",
+  "Python",
+  "REST APIs",
+  "Git",
+  "Figma",
 ];
 
+export const EXPERIENCES = [
+  {
+    yearRange: "Jan 2024 — Present",
+    title: "Software Developer, Intern",
+    location: "Fort Wayne, IN",
+    description: [
+      "Built a FHIR-compliant form builder in React and Editor.js to streamline healthcare data workflows.",
+      "Implemented a drag-and-drop interface with import/export support for fast, mobile-friendly form management.",
+      "Partnered with healthcare professionals to align product UX decisions with real clinical workflows.",
+    ],
+  },
+  {
+    yearRange: "July 2020 — Present",
+    title: "Signal Operation Support Specialist",
+    location: "Indianapolis, IN",
+    description: [
+      "Maintained mission-critical signal systems and communication devices.",
+      "Provided technical support for computer and network infrastructure, including preventive maintenance.",
+      "Managed network operations and satellite/antenna solutions while enforcing communication policies.",
+    ],
+  },
+  {
+    yearRange: "Aug 2023 — Dec 2024",
+    title: "Project Manager, Co-Op",
+    location: "Fort Wayne, IN",
+    description: [
+      "Led migration of the SMC backend from Airtable to Baserow, reducing operating costs by 30%.",
+      "Ran sprint execution and stakeholder communication with predictable milestone delivery.",
+      "Coordinated a team of five to ship project outcomes on time with strong quality.",
+    ],
+  },
+];
 
 export const CONTACT_CONTENT = {
   headline: "Let's Build Something Clean and Scalable",

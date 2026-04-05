@@ -3,7 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Container from "../../components/ui/Container";
 import SectionHeading from "../../components/ui/SectionHeading";
-import { skills } from "./skills.data";
+import { skills } from "../../constants";
 
 gsap.registerPlugin(ScrollTrigger);
 

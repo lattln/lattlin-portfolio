@@ -325,6 +325,10 @@ export default function App() {
     );
   }
 
+  const progressPercent =
+    carouselPanels.length > 1
+      ? (indicatorIndex / (carouselPanels.length - 1)) * 100
+      : 0;
   const isContactActive = carouselPanels[activeIndex]?.key === "contact";
   const isContactIndicator = carouselPanels[indicatorIndex]?.key === "contact";
 
@@ -340,6 +344,23 @@ export default function App() {
           gotoRef.current(idx, direction, true);
         }}
       />
+
+      <div className="pointer-events-none fixed bottom-4 left-1/2 z-[70] w-[min(88vw,72rem)] -translate-x-1/2">
+        <div
+          className={`relative h-[2px] w-full rounded-full ${
+            isContactIndicator ? "bg-white/35" : "bg-text-secondary/28"
+          }`}
+          aria-hidden="true"
+        >
+          <span
+            className={`absolute left-0 top-0 h-[2px] rounded-full transition-[width] duration-300 ease-out ${
+              isContactIndicator ? "bg-white" : "bg-black"
+            }`}
+            style={{ width: `${progressPercent}%` }}
+          />
+        </div>
+      </div>
+
       {carouselPanels.map((panel, idx) => (
         <section
           key={panel.key}
