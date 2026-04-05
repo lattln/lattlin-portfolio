@@ -1,62 +1,3 @@
-<<<<<<< Updated upstream
-import project1 from "../assets/project1.webp";
-import project2 from "../assets/project2.webp";
-import project3 from "../assets/project3.webp";
-import project4 from "../assets/project4.webp";
-import { RiGithubFill, RiLinkedinFill } from '@remixicon/react'
-
-
-export const LINKS = [
-    { href: "#work", label: "Work" },
-    { href: "#about", label: "About" },
-    { href: "#experience", label: "Experience" },
-    { href: "#contact", label: "Contact" },
-];
-
-export const HERO_CONTENT = {
-    greeting: "Hi! 👋",
-    introduction:
-        "I’m Lin Latt, a creative frontend developer, crafting immersive and intuitive web experiences.",
-    description:
-        "I’m currently helping businesses bring their visions to life through interactive digital solutions.",
-    resumeLinkText: "Download Resume",
-    resumeLink: "/resume.pdf",
-};
-
-export const PROJECTS = [
-    {
-        name: "Macro and Me (WIP)",
-        description: "Track your meals and calories with smart AI suggestions",
-        image: project1,
-        link: "https://github.com/lattln",
-    },
-    {
-        name: "Electronic Health Record Dashboard (WIP)",
-        description: "FHIR Compliance Dashboard with clinical & Patient views",
-        image: project2,
-        link: "https://github.com/lattln",
-    },
-    {
-        name: "MIE Form Builder",
-        description: "FHIR Compliance form builder for creating & Editing questionnaire",
-        image: project3,
-        link: "https://github.com/lattln",
-    },
-    {
-        name: "Form Builder Packages",
-        description:
-            "Multiple NPM package for editorjs, Devdependencies for FHIR Questionnaire Builder",
-        image: project4,
-        link: "https://github.com/lattln",
-    },
-];
-
-export const ABOUT_CONTENT = {
-    paragraphs: [
-        "I'm a passionate full-stack developer with experience in building responsive and scalable web applications. I enjoy working with modern technologies and continuously learning to improve my skills.",
-        "I specialize in using technologies like React, Next.js, and Tailwind CSS to create responsive and scalable interfaces. My focus is on writing clean, maintainable code while collaborating with cross-functional teams to deliver projects that meet both business goals and user needs. I thrive in environments that challenge me to continuously learn and grow.",
-    ],
-=======
 import { RiGithubFill, RiLinkedinFill } from "@remixicon/react";
 import macroAndMeImg from "../assets/images/macroAndMe.png";
 import ehrDashboardImg from "../assets/images/ehrDashboard.png";
@@ -161,7 +102,6 @@ export const ABOUT_CONTENT = {
     "I build systems that simplify complexity—turning structured data and workflows into interfaces people can actually use.",
     "My focus is clarity: clear data, clear UI, and clear outcomes. Ship fast, measure impact, and iterate with purpose.",
   ],
->>>>>>> Stashed changes
 };
 
 export const EXPERIENCES = [
@@ -199,27 +139,6 @@ export const EXPERIENCES = [
 
 
 export const CONTACT_CONTENT = {
-<<<<<<< Updated upstream
-    headline: "LET'S WORK ON SOMETHING GREAT",
-    description:
-        "I'm excited to collaborate on projects that push boundaries and create meaningful impact. Let's build something innovative and exceptional together.",
-    email: "lattln.tech@gmail.com",
-    socialLinks: [
-        {
-            platform: "GitHub",
-            url: "https://github.com/lattln",
-            ariaLabel: "View my GitHub profile",
-            icon: RiGithubFill,
-        },
-        {
-            platform: "LinkedIn",
-            url: "https://www.linkedin.com/in/lin-latt/",
-            ariaLabel: "Connect with me on LinkedIn",
-            icon: RiLinkedinFill,
-        },
-    ],
-    footerText: `© ${new Date().getFullYear()} Lin Latt. All rights reserved.`,
-=======
   headline: "Let's Build Something Clean and Scalable",
   description:
     "Have an idea or product to build? I focus on creating fast, reliable systems that users understand and trust.",
@@ -239,5 +158,4 @@ export const CONTACT_CONTENT = {
     },
   ],
   footerText: `© ${CURRENT_YEAR} Lin Latt. All rights reserved.`,
->>>>>>> Stashed changes
 };
